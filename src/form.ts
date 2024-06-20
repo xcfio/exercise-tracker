@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 
-const form = `
+const html_form = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,4 +105,6 @@ const form = `
 </html>
 `
 
-export default (_req: Request, res: Response) => res.send(form)
+export function form(_req: Request, res: Response) {
+    res.send(html_form)
+}
