@@ -42,7 +42,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-config/
 log/
 .vscode/
 
@@ -84,6 +83,7 @@ web_modules/
 .env.local
 pnpm-lock.yaml
 package-lock.json
+config.json
 *.js
 *.csv
 

@@ -1,0 +1,7 @@
+{
+    "host": "Your Host Name",
+    "database": "Your Database Name",
+    "username": "Your Username",
+    "password": "Your Password",
+    "ssl": "Your SSL status"
+}

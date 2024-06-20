@@ -10,7 +10,7 @@ export async function create_table() {
 
     await sql`
         create table exercises (
-            id serial primary key,
+            id uuid default gen_random_uuid() primary key,
             user_id uuid references users(id),
             description text not null,
             duration integer not null,
