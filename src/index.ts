@@ -9,7 +9,7 @@ app.post("/api/users", urlencoded(), create_user)
 app.get("/api/users", get_user)
 
 app.post("/api/users/:_id/exercises", urlencoded(), set_exercise)
-app.get("api/users/:_id/logs", get_exercise)
+app.get("/api/users/:_id/logs", get_exercise)
 
 app.get("/", form)
 app.listen(3000, () => console.log("Server is running"))
