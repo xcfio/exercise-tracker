@@ -9,7 +9,7 @@ export async function set_exercise(req: Request, res: Response) {
 
         const [exercise] = await sql<Array<exercise>>`
             insert into exercises (user_id, description, duration, date) 
-            values (${_id}, ${description}, ${duration}, ${date}) 
+            values (${_id}, ${description}, ${duration}, ${date ?? new Date()}) 
             returning *
         `
 
@@ -21,7 +21,8 @@ export async function set_exercise(req: Request, res: Response) {
             duration: exercise.duration,
             date: exercise.date.toDateString()
         })
-    } catch (err) {
+    } catch (error) {
+        console.trace(error)
         res.sendStatus(500)
     }
 }

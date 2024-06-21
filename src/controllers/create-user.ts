@@ -13,7 +13,8 @@ export async function create_user(req: Request, res: Response) {
         `
 
         res.json({ username: user.username, _id: user.id })
-    } catch (err) {
+    } catch (error) {
+        console.trace(error)
         res.sendStatus(500)
     }
 }

@@ -30,6 +30,7 @@ export async function get_exercise(req: Request, res: Response) {
             }))
         })
     } catch (error) {
+        console.trace(error)
         res.sendStatus(500)
     }
 }
